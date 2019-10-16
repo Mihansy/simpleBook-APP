@@ -1,5 +1,7 @@
 # simplebook-app
 
+## 技术框架： es6 + vue2.x + vue/cli 3.x + vuex + vue-router + axios + vant + scss
+
 ## Project setup
 ```
 yarn install

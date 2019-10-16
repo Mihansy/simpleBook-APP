@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
-    <div>首页</div>
+  <div class="attention">
+    <h1>关注</h1>
   </div>
 </template>
 
 <script>
 	export default {
-		name: 'home',
+		name: 'attention',
 		components: {
 		
 		}
