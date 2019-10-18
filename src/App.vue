@@ -1,14 +1,29 @@
 <template>
   <div id="app">
 		<router-view v-if="logined"/>
-		<div v-else>
+		<div class="container" v-else>
 			<router-view/>
 			<div id="nav">
-			  <router-link to="/home">首页</router-link>
-			  <router-link to="/attention">关注</router-link>
-				<router-link to="/diamonds">简书钻</router-link>
-				<router-link to="/message">消息</router-link>
-				<router-link to="/my">我的</router-link>
+			  <router-link to="/home">
+					<i class="iconfont iconshouye"></i>
+					首页
+				</router-link>
+			  <router-link to="/attention">
+					<i class="iconfont icontianchongxing-"></i>
+					关注
+				</router-link>
+				<router-link to="/diamonds">
+					<i class="iconfont icon31"></i>
+					简书钻
+				</router-link>
+				<router-link to="/message">
+					<i class="iconfont iconxiaoxi"></i>
+					消息
+				</router-link>
+				<router-link to="/my">
+					<i class="iconfont iconwode"></i>
+					我的
+				</router-link>
 			</div>
 		</div>
   </div>
@@ -31,12 +46,10 @@
 			}
 		},
 		mounted() {
-			//this.path = this.$route.path  //this.path = 当前页面路由
 			this.showLogin(this.$route.path)
 		},
 		watch: { //监测路由变化
 			$route(to, from) {
-				//this.path = to.path
 				this.showLogin(to.path)
 			}
 		}
@@ -48,8 +61,10 @@
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
+		.container {
+			padding-bottom: 50px;
+			background-color: #f0f0f0;
+		}
 	}
 	#nav {
 		position: fixed;
@@ -60,11 +75,27 @@
 		height: 50px;
 		background-color: #fff;
 		border-top: 1px solid #ddd;
+		padding-left: 8%;
+		padding-right: 8%;
+		display: flex;
+		justify-content: space-between;
 		a {
-			font-weight: bold;
-			color: #2c3e50;
+			display: block;
+			text-align: center;
+			color: #969696;
+			font-size: 0.75rem;
 			&.router-link-exact-active {
-				color: #42b983;
+				color: #ea6f5a;
+			}
+			i {
+				display: block;
+				font-size: 1.25rem;
+				height: 24px;
+				margin-top: 10%;
+				line-height: 24px;
+				&.icon31 {
+					font-size: 1.75rem
+				}
 			}
 		}
 	}

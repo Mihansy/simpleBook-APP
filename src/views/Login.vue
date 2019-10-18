@@ -63,7 +63,8 @@ export default {
 
 <style scoped lang="scss">
 	.login {
-		margin: 10% 8% 0;
+		padding: 10% 8% 0;
+		position: absolute;
 		h3 {
 			text-align: center;
 			font-weight: normal;
@@ -79,6 +80,7 @@ export default {
 		.tip {
 			color: #2d54ab;
 			font-size: 0.875rem;
+			text-align: center;
 			a {
 				color: #999;
 				padding: 0 10px;
@@ -102,6 +104,7 @@ export default {
 				}
 			}
 			.btns {
+				text-align: center;
 			  a {
 			    i {
 						font-size: 1.75rem;
